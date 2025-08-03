@@ -13,7 +13,8 @@ Made with Cerebras X Cline in a few hours
 * Collect all the pellets while dodging ghosts.
 * Eat cherries to switch into Shooter Mode.
 * 
-<img width="447" height="463" alt="Screenshot 2025-08-03 at 19 15 12" src="https://github.com/user-attachments/assets/7b8f7cbe-5caf-48af-a187-322acfe27a8d" />
+
+<img width="443" height="466" alt="Screenshot 2025-08-03 at 19 27 24" src="https://github.com/user-attachments/assets/16a9bdab-0fab-428a-96cb-2d3a7cab9ad5" />
 
 ### Shooter Mode (3D Third-Person)
 
@@ -22,8 +23,9 @@ Made with Cerebras X Cline in a few hours
 * Shoot ghosts with Left Mouse Button.
 * Objective: Eliminate every ghost or survive for 30 seconds.
 * Automatically return to PacMan Mode once the goal is met.
-<img width="1427" height="793" alt="Screenshot 2025-08-03 at 19 17 26" src="https://github.com/user-attachments/assets/25ab00af-6b7f-40c6-8060-dd6a9a3f561f" />
 
+
+<img width="1385" height="780" alt="Screenshot 2025-08-03 at 19 28 16" src="https://github.com/user-attachments/assets/d9d2159e-0750-4d20-96f4-8fd3a18243e9" />
 
 ---
 
