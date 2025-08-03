@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjp46py52a4nl"]
+
+[ext_resource type="Script" uid="uid://83ru0ire5knj" path="res://scripts/ShooterGame.gd" id="1_0hdqx"]
+[ext_resource type="PackedScene" uid="uid://248o1oxv0nh7" path="res://assets/3d/Map/scene.gltf" id="2_map"]
+[ext_resource type="PackedScene" uid="uid://cqg6ham5jn4lh" path="res://scenes/Pellet3D.tscn" id="3_pellet"]
+
+[node name="ShooterGame" type="Node3D"]
+script = ExtResource("1_0hdqx")
+
+[node name="Map3D" type="Node3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="map" parent="Map3D" instance=ExtResource("2_map")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.1024, 0)
+
+[node name="WallsContainer" type="Node3D" parent="."]
+
+[node name="GhostsContainer" type="Node3D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="PelletsContainer" type="Node3D" parent="."]
+
+[node name="Pellet3D1" parent="PelletsContainer" instance=ExtResource("3_pellet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 5)
+
+[node name="Pellet3D2" parent="PelletsContainer" instance=ExtResource("3_pellet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 5)
+
+[node name="Pellet3D3" parent="PelletsContainer" instance=ExtResource("3_pellet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -5)
+
+[node name="Pellet3D4" parent="PelletsContainer" instance=ExtResource("3_pellet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -5)
+
+[node name="Pellet3D5" parent="PelletsContainer" instance=ExtResource("3_pellet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

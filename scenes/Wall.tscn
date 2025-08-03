@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvn8xqwqvqwqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(32, 32)
+
+[node name="Wall" type="StaticBody2D" groups=["walls"]]
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="WallBorders" type="Node2D" parent="."]
+
+[node name="TopBorder" type="ColorRect" parent="WallBorders"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = -14.0
+color = Color(0, 0, 0.8, 1)
+
+[node name="BottomBorder" type="ColorRect" parent="WallBorders"]
+offset_left = -16.0
+offset_top = 14.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0, 0, 0.8, 1)
+
+[node name="LeftBorder" type="ColorRect" parent="WallBorders"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = -14.0
+offset_bottom = 16.0
+color = Color(0, 0, 0.8, 1)
+
+[node name="RightBorder" type="ColorRect" parent="WallBorders"]
+offset_left = 14.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0, 0, 0.8, 1)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcjvdttn6ou54"]
+
+[ext_resource type="Script" uid="uid://bc7jx5mf0d6bm" path="res://scripts/Pellet.gd" id="1_0hdqx"]
+[ext_resource type="Texture2D" uid="uid://h3bar0wf2tnq" path="res://assets/pacman-art/other/dot.png" id="2_dot"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 4.0
+
+[node name="Pellet" type="Area2D"]
+script = ExtResource("1_0hdqx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+scale = Vector2(2, 2)
+texture = ExtResource("2_dot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")

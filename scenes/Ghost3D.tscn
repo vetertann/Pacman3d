@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba40rrwfmh0fd"]
+
+[ext_resource type="Script" uid="uid://befu4wjl1wrqc" path="res://scripts/Ghost3D.gd" id="1_0hdqx"]
+[ext_resource type="PackedScene" uid="uid://cuwp4ic81qwcg" path="res://assets/3d/Ghost blue/scene.gltf" id="2_ghost"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
+height = 1.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1"]
+radius = 0.7
+
+[node name="Ghost3D" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10931, 0)
+script = ExtResource("1_0hdqx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 4.99998, 0.01309, 0, -0.01309, 4.99998, 0, 1.9535, 0)
+shape = SubResource("CapsuleShape3D_1")
+
+[node name="GhostModel" type="Node3D" parent="."]
+transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, 0, 0, 0)
+
+[node name="ghost" parent="GhostModel" instance=ExtResource("2_ghost")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 326.886, 0)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="ShootTimer" type="Timer" parent="."]
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.5)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, -0.126818, 0)
+shape = SubResource("SphereShape3D_1")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

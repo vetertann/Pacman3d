@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dejvdttn6ou54"]
+
+[ext_resource type="Script" uid="uid://b3n817kblbcgd" path="res://scripts/PacmanGame.gd" id="1_0hdqx"]
+[ext_resource type="PackedScene" uid="uid://c4xqxvqwqvqwv" path="res://scenes/Player.tscn" id="2_player"]
+
+[node name="PacmanGame" type="Node2D"]
+script = ExtResource("1_0hdqx")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+
+[node name="MazeContainer" type="Node2D" parent="."]
+
+[node name="PelletsContainer" type="Node2D" parent="."]
+
+[node name="GhostsContainer" type="Node2D" parent="."]

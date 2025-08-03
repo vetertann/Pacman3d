@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://d5xqxvqwqvqwv"]
+
+[ext_resource type="Script" path="res://scripts/Ghost.gd" id="1_0hdqx"]
+[ext_resource type="Texture2D" uid="uid://new_blinky" path="res://assets/pacman-art/ghosts/blinky.png" id="2_blinky"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2"]
+radius = 16.0
+
+[node name="Ghost" type="CharacterBody2D"]
+script = ExtResource("1_0hdqx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_blinky")
+scale = Vector2(2, 2)
+z_index = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdc5q0gvtykdo"
+path="res://.godot/imported/Pixel Pursuit.mp3-0ed5dd00f33c0aae5bd30ded76fe9d84.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Pixel Pursuit.mp3"
+dest_files=["res://.godot/imported/Pixel Pursuit.mp3-0ed5dd00f33c0aae5bd30ded76fe9d84.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
